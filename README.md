@@ -70,7 +70,7 @@ DESIGN.md
 
 ## Getting Started
 
-1. Prerequisites
+1. **Prerequisites**
 
 ### Install AWS CLI
 
@@ -100,7 +100,7 @@ Verify credentials:
 aws sts get-caller-identity
 ```
 
-2. Install Terraform
+2. **Install Terraform**
 
 Verify:
 
@@ -108,7 +108,7 @@ Verify:
 terraform -version
 ```
 
-3. Update terraform.tfvars
+3. **Update terraform.tfvars**
 
 Open:
 
@@ -124,7 +124,7 @@ s3_bucket_name = "your-unique-bucket-name"
 
 The bucket name must be globally unique.
 
-4. Package the Lambda Function
+4. **Package the Lambda Function**
 
 From inside `data-engineering/lambda/`:
 
@@ -135,7 +135,7 @@ zip processor.zip processor.py
 
 Terraform will deploy this zip.
 
-5. Deploy Infrastructure with Terraform
+5. **Deploy Infrastructure with Terraform**
 
 Go to the Terraform directory:
 
@@ -190,19 +190,19 @@ aws s3 ls s3://your-bucket/processed/
 
 ## Querying in Athena
 
-1. Open Athena → Query Editor
+1. **Open Athena → Query Editor**
 
 Set query result location (once):
 
 `s3://your-bucket/athena-results/`
 
-2. Load partitions
+2. **Load partitions**
 
 ```sql
 MSCK REPAIR TABLE clickstream_events;
 ```
 
-3. Sample queries
+3. **Sample queries**
 
 Get 10 events:
 
