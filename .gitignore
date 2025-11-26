@@ -1,7 +1,23 @@
-# Terraform
+# Local Terraform state files
 *.tfstate
-*.tfstate.backup
-.terraform/
+*.tfstate.*
+crash.log
+*.crash
 
-# Local env
-.env
+# Terraform working directory
+.terraform/
+**/.terraform/
+
+# Ignore packaged lambda zips
+lambda/processor.zip
+
+# Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/

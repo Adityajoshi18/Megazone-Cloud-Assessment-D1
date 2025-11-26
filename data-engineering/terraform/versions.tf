@@ -1,3 +1,5 @@
+# Terraform and provider configuration.
+
 terraform {
   required_version = ">= 1.5.0"
 
@@ -9,6 +11,7 @@ terraform {
   }
 }
 
+# AWS provider configuration.
 provider "aws" {
   region = var.aws_region
 }
