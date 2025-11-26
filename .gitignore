@@ -9,7 +9,7 @@ crash.log
 **/.terraform/
 
 # Ignore packaged lambda zips
-lambda/processor.zip
+data-engineering/lambda/processor.zip
 
 # Python files
 __pycache__/
